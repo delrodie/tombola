@@ -1,13 +1,22 @@
 <!DOCTYPE html>
+<html lang="fr">
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Resultats tirage au sort Tombola Campagne "METS FIN AU SIDA"{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ absolute_url(asset('ressources/images/favicon.ico')) }}" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="{{ absolute_url(asset('ressources/css/style.min.css')) }}">
     </head>
     <body>
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="{{ absolute_url(asset('ressources/js/script.min.js')) }}"></script>
+        {% endblock %}
     </body>
 </html>

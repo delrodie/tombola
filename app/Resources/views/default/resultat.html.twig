@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container-search-job">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-10 offset-md-1">
+					<div class="search-job text-center" style="margin-top: 120px; color: #fff;">
+						<h2 class="search-job-title"><span>FELICITATION !!!</span> </h2>
+						<P>Votre gain est d'une valeur de <h1>{{ tombola.montant|number_format(0,' ','.') }} FCFA</h1></P>
+						<p>Prière contacter les numéros suivants pour rentrer en possession: </p>
+						<h3><a href="tel:+22549273535" style="color: #075804;">49 27 35 35</a> / <a href="tel:+22506759494" style="color: #075804;">06 75 94 94</a></h3>
+
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-10 text-right" style="padding-top: 75px;">
+					<a href="{{ absolute_url(path('homepage')) }}" style="color: #075804; font-weight: bold;">Retour a la page d'accueil</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
