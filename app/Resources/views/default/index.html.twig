@@ -5,9 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1" style="padding-bottom: 100px;">
-                    <div class="search-job" style="margin-top: 50px; margin-bottom: 100px; color: #fff;">
-                        <h2 class="search-job-title" style="color: #fff; font-weight: bold; font-size: 2em;"><span>Verifiez le resultat</span> </h2>
-                        <P class="text-center" style="font-weight: bold;">Entrez les 8 prémiers caractères de votre code.</P>
+                    <div class="search-job" style="margin-top: 50px; margin-bottom: 200px; color: #fff;">
+                        <!--<h2 class="search-job-title" style="color: #fff; font-weight: bold; font-size: 2em;"><span>Verifiez le resultat</span> </h2>
+                        <P class="text-center" style="font-weight: bold;">Entrez les 8 prémiers caractères de votre code.</P>-->
 
                         <div class="search-job-form">
                             <form action="#" method="get">
@@ -62,7 +62,7 @@
                                                 entitySelector.append(
                                                         '<span style="font-size: 1.2em; font-weight: bold;">FE-LI-CI-TA-TION !!! </span><br><br>' +
                                                         'Cliquez sur votre code pour voir votre gain <br><br>' +
-                                                        '<span style="font-size: 1.2em; font-weight: bold"> <a href="/tombola/'+id+'-premier-tirage" title="Cliquez pour voir le montant de votre gain">'+value+'</a></span><br><br><br>'
+                                                        '<span style="font-size: 1.2em; font-weight: bold"> <a href="/tombola/'+id+'-premier-tirage" title="Cliquez pour voir le montant de votre gain">'+value[0]+'</a></span><br><br><br>'
                                                 );
                                             } else {
                                                 entitySelector.append('<strong>'+value+'</strong>');

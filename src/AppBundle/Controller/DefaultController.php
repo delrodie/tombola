@@ -33,10 +33,10 @@ class DefaultController extends Controller
 
         $code = $request->get('code');
 
-        $resultats = $em->getRepository('AppBundle:Tombola')->findByCode(strtolower($code));
+        $resultats = $em->getRepository('AppBundle:Tombola')->findByCode(strtolower($code)); //.dump($resultats);die();
 
         if (!$resultats){
-            $resultat['resultats']['error'] = "<span style='font-size: 1.4em;'>Désolé!! </span><br>,<br> Votre code n'a pas été tiré à cette premiere phase. <br><br> Toutefois conservez le soigneusement pour le second tirage.<br><br> Bonne Chance!";
+            $resultat['resultats']['error'] = "<span style='font-size: 1.4em;'>Désolé! </span><br>,<br> Votre code n'a pas été tiré cette fois-ci.<br><br> Bonne Chance!";
         } else{
             $resultat['resultats'] = $this->getRealCodes($resultats);
         }
@@ -47,7 +47,7 @@ class DefaultController extends Controller
     public function getRealCodes($resultats)
     {
         foreach ($resultats as $resultat){
-            $realCodes[$resultat->getId()] = $resultat->getCode();
+            $realCodes[$resultat->getId()] = [$resultat->getCode(), $resultat->getMontant()];
         }
 
         return $realCodes;
